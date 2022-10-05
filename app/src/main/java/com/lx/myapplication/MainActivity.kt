@@ -1,5 +1,6 @@
 package com.lx.myapplication
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.bumptech.glide.Glide
@@ -14,5 +15,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         Glide.with(this).load(R.raw.logo).override(560, 560).into(binding.imageView)
+
     }
 }
