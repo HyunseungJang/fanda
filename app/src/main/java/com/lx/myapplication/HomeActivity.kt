@@ -30,9 +30,20 @@ class HomeActivity : AppCompatActivity() {
 
         // 데이터 넣기
         artistAdapter?.apply {
-            this.items.add(ArtistData(R.drawable.blackpinck,"블랙핑크",))
-            this.items.add(ArtistData(R.drawable.girlsgeneration,"소녀시대",))
             this.items.add(ArtistData(R.drawable.bts,"방탄소년단",))
+            this.items.add(ArtistData(R.drawable.girlsgeneration,"소녀시대",))
+            this.items.add(ArtistData(R.drawable.blackpinck,"BLACKPINK",))
+            this.items.add(ArtistData(R.drawable.gidle,"여자아이들",))
+            this.items.add(ArtistData(R.drawable.jang,"장현승",))
+            this.items.add(ArtistData(R.drawable.stayc,"STAYC",))
+            this.items.add(ArtistData(R.drawable.bigbang,"빅뱅",))
+            this.items.add(ArtistData(R.drawable.aespa,"AESPA",))
+            this.items.add(ArtistData(R.drawable.seventeen,"세븐틴",))
+            this.items.add(ArtistData(R.drawable.monstax,"몬스타엑스",))
+            this.items.add(ArtistData(R.drawable.ive,"아이브",))
+            this.items.add(ArtistData(R.drawable.newjeans,"뉴진스",))
         }
+
+
     }
 }

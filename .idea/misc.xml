@@ -8,6 +8,47 @@
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_login.xml" value="0.18" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_main.xml" value="0.5" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_splash.xml" value="0.1" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/fanda/app/src/main/res/layout/activity_home.xml" value="0.3605128205128205" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/fanda/app/src/main/res/layout/activity_main.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/fanda/app/src/main/res/layout/activity_notice.xml" value="0.21388888888888888" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/fanda/app/src/main/res/layout/artist_item.xml" value="0.3605128205128205" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/fanda/app/src/main/res/layout/feeditem.xml" value="0.5" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/fanda/app/src/main/res/layout/fragment_feed.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/fanda/app/src/main/res/layout/fragment_home.xml" value="0.33" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/fanda/app/src/main/res/layout/fragment_my.xml" value="0.33" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/fanda/app/src/main/res/layout/notice_item.xml" value="0.75" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/fanda/app/src/main/res/layout/noticeitem.xml" value="0.42777777777777776" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/fanda/app/src/main/res/menu/bottom_navigation.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/fanda/app/src/main/res/menu/navi_menu.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/fanda2/app/src/main/res/layout/activity_home.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/fanda2/app/src/main/res/layout/activity_main.xml" value="0.25569620253164554" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/fanda2/app/src/main/res/layout/activity_place_info.xml" value="0.33" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/fanda2/app/src/main/res/layout/activity_register.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/fanda2/app/src/main/res/layout/activity_test.xml" value="0.12314814814814815" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/fanda2/app/src/main/res/layout/artist_item.xml" value="0.12314814814814815" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/fanda2/app/src/main/res/layout/feeditem.xml" value="0.1" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/fanda2/app/src/main/res/layout/fragment_home.xml" value="0.5" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/fanda2/app/src/main/res/layout/noticeitem.xml" value="0.28" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/fanda2/app/src/main/res/layout/place_item.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/ekrcu/AndroidStudioProjects/fanda/app/src/main/res/drawable/artist_item_button.xml" value="0.1" />
+        <entry key="..\:/Users/ekrcu/AndroidStudioProjects/fanda/app/src/main/res/drawable/menu_click_color.xml" value="0.1" />
+        <entry key="..\:/Users/ekrcu/AndroidStudioProjects/fanda/app/src/main/res/drawable/round.xml" value="0.1" />
+        <entry key="..\:/Users/ekrcu/AndroidStudioProjects/fanda/app/src/main/res/layout/activity_home.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/ekrcu/AndroidStudioProjects/fanda/app/src/main/res/layout/activity_main.xml" value="0.2722222222222222" />
+        <entry key="..\:/Users/ekrcu/AndroidStudioProjects/fanda/app/src/main/res/layout/activity_navi.xml" value="0.1" />
+        <entry key="..\:/Users/ekrcu/AndroidStudioProjects/fanda/app/src/main/res/layout/activity_register.xml" value="0.33" />
+        <entry key="..\:/Users/ekrcu/AndroidStudioProjects/fanda/app/src/main/res/layout/fragment_home.xml" value="0.2851851851851852" />
+        <entry key="..\:/Users/ekrcu/AndroidStudioProjects/fanda/app/src/main/res/layout/fragment_my.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/ekrcu/AndroidStudioProjects/fanda/app/src/main/res/layout/fragment_place.xml" value="0.33" />
+        <entry key="..\:/Users/ekrcu/AndroidStudioProjects/fanda/app/src/main/res/layout/noticeitem.xml" value="0.5" />
+        <entry key="..\:/Users/ekrcu/AndroidStudioProjects/fanda/app/src/main/res/menu/nav.xml" value="0.1" />
+        <entry key="..\:/Users/ekrcu/AndroidStudioProjects/fanda/app/src/main/res/menu/navi_menu.xml" value="0.22" />
+        <entry key="..\:/Users/ekrcu/AndroidStudioProjects/fanda2/app/src/main/res/layout/activity_cart.xml" value="0.1" />
+        <entry key="..\:/Users/ekrcu/AndroidStudioProjects/fanda2/app/src/main/res/layout/activity_main.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/ekrcu/AndroidStudioProjects/fanda2/app/src/main/res/layout/activity_order.xml" value="0.1" />
+        <entry key="..\:/Users/ekrcu/AndroidStudioProjects/fanda2/app/src/main/res/layout/activity_place_info.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/ekrcu/AndroidStudioProjects/fanda2/app/src/main/res/layout/fragment_home.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/ekrcu/AndroidStudioProjects/fanda2/app/src/main/res/layout/fragment_place.xml" value="0.36614583333333334" />
       </map>
     </option>
   </component>

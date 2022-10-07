@@ -4,8 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import com.lx.myapplication.MainActivity
-import com.lx.myapplication.R
 
 class SplashActivity : AppCompatActivity() {
 
