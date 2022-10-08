@@ -20,24 +20,24 @@ class RegisterActivity : AppCompatActivity() {
             val pass = binding.passInput.text.toString()
             val repass = binding.repassInput.text.toString()
             if(user == "" || pass == "" || repass == "")
-                showToast("회원정보를 전부 입력해주세요")
+                showToast("Please enter all information")
                 else{
                 if(pass == repass){
                     val checkUsername = DB!!.checkUserName(user)
                     if(checkUsername == false){
                         val insert = DB!!.insertData(user, pass)
                         if(insert == true){
-                            showToast("가입되었습니다.")
+                            showToast("Register Success")
                             val intent = Intent(applicationContext, LoginActivity::class.java)
                             startActivity(intent)
                         } else {
-                            showToast("비밀번호가 일치하지 않습니다.")
+                            showToast("Please check your information agian")
                         }
                     } else {
-                        showToast("이미 가입된 회원입니다.")
+                        showToast("Already exists")
                     }
                 } else {
-                    showToast("비밀번호가 일치하지 않습니다.")
+                    showToast("Please try again in a few minutes")
                 }
             }
         }

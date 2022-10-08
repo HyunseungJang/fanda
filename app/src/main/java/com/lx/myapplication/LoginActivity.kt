@@ -22,15 +22,15 @@ class LoginActivity : AppCompatActivity() {
             AppData.user = binding.nickname!!.text.toString()
             val pass = binding.password!!.text.toString()
             if (user == "" || pass == "")
-                showToast("회원정보를 전부 입력해주세요ㅎ")
+                showToast("Please enter all information")
                 else {
                 val checkUserpass = DB!!.checkUserpass(user, pass)
                 if (checkUserpass == true) {
-                    showToast("로그인 되었습니다.")
+                    showToast("Login Success")
                     val homeIntent = Intent(applicationContext, HomeActivity::class.java)
                     startActivity(homeIntent)
                 } else {
-                    showToast("회원정보가 일치하지 않습니다.")
+                    showToast("Please check your information again")
                 }
             }
         }

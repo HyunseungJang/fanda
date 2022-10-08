@@ -26,7 +26,6 @@ class MyFragment : Fragment() {
         override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
             _binding = FragmentMyBinding.inflate(inflater, container, false)
 
-            binding.userName2.setText("${AppData.user}")
             binding.textView38.setText("${AppData.reward} points")
 
             // 뷰 초기화
@@ -57,7 +56,7 @@ class MyFragment : Fragment() {
         // 3. 아이템에 데이터 넣어보기
         itemAdapter?.apply {
 
-            this.items.add(NoticeData(R.drawable.profile1,R.drawable.cafereward,"  카페","  1000포인트"))
+            this.items.add(NoticeData(R.drawable.profile1,R.drawable.blank ,"  Hello! My name is","  ${AppData.user}"))
 
         }
     }
