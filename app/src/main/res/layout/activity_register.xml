@@ -28,7 +28,7 @@
             android:layout_marginLeft="15dp"
             android:layout_marginTop="20dp"
             android:layout_marginRight="15dp"
-            android:hint="아이디를 입력해주세요"
+            android:hint="Enter your ID"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -46,10 +46,9 @@
             android:layout_marginLeft="15dp"
             android:layout_marginTop="20dp"
             android:layout_marginRight="15dp"
-            android:hint="비밀번호를 입력해주세요"
+            android:hint="Enter your password"
             android:inputType="textPassword"
-            android:textSize="14sp"
-             />
+            android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -66,10 +65,9 @@
             android:layout_marginLeft="15dp"
             android:layout_marginTop="20dp"
             android:layout_marginRight="15dp"
-            android:hint="비밀번호를 확인해주세요"
+            android:hint="Enter your password again"
             android:inputType="textPassword"
-            android:textSize="14sp"
-             />
+            android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -85,7 +83,7 @@
             android:layout_marginLeft="15dp"
             android:layout_marginTop="20dp"
             android:layout_marginRight="15dp"
-            android:hint="좋아하는 아티스트를 입력해주세요"
+            android:hint="Enter your name"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -97,6 +95,6 @@
         android:layout_marginTop="40dp"
         android:layout_marginRight="18dp"
         android:background="@drawable/registerbtn"
-        android:text="가입하기"
+        android:text="Sign up"
         android:textColor="@color/white" />
 </LinearLayout>
