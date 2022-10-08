@@ -57,7 +57,8 @@ import com.permissionx.guolindev.PermissionX
         }
         // 사진촬영하기 버튼 눌렀을 떄
         binding.arButton.setOnClickListener {
-
+            AppData.reward = AppData.reward!! + 1000
+            
         }
 
         // Google Map으로 이동 버튼 눌렀을 때

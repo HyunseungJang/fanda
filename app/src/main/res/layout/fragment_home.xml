@@ -36,14 +36,13 @@
         </androidx.recyclerview.widget.RecyclerView>
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/textView35"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5sp"
+            android:layout_marginLeft="10sp"
             android:layout_marginTop="20dp"
-            android:layout_marginRight="5sp"
-            android:text="[공지] 2030 부산세계박람회 유치 기원 콘서트 BTS BUSAN 공연 장소가 XX 콘서트장으로 변경되었습니다. 이용에 착오 없으시길 바랍니다."
-            android:fontFamily="@font/b"
+            android:layout_marginRight="10sp"
+            android:text="[Announcement] The venue for the BTS BUSAN concert, which is a wish to host the 2030 Busan World Expo, has been changed to XX concert hall."
             android:textSize="20sp" />
 
     </LinearLayout>

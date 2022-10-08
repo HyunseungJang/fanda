@@ -1,59 +1,64 @@
 package com.lx.myapplication
 
+import android.content.ContentResolver
+import android.graphics.Bitmap
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.lx.myapplication.databinding.FragmentMyBinding
+import java.text.SimpleDateFormat
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [MyFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class MyFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    var _binding: FragmentMyBinding? = null
+    val binding get() = _binding!!
+    var itemAdapter: NoticeAdapter?=null
+    val itemInfoLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+    }
+    val dateFormat = SimpleDateFormat("yyyy-MM-dd HH:mm")
+    var bitmap: Bitmap? = null
+    val cr: ContentResolver?= null
+
+        override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+            _binding = FragmentMyBinding.inflate(inflater, container, false)
+
+            binding.userName2.setText("${AppData.user}")
+            binding.textView38.setText("${AppData.reward} points")
+
+            // 뷰 초기화
+            initView()
+            // 리스트 초기화
+            initList()
+
+
+            return binding.root
         }
+    //뷰 초기화
+    fun initView() {
+
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_my, container, false)
-    }
+    // 리스트 초기화
+    fun initList() {
+        // 1. 리스트의 모양을 담당하는 것
+        // (LinearLayoutManager : 아래쪽으로 아이템들이 보이는 것, GridLayoutManager : 격자 형태로 보이는 것)
+        val layoutManager = LinearLayoutManager(activity)
+        binding.rewardItemList.layoutManager = layoutManager
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment MyFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            MyFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+        // 2. 어댑터를 설정하는 것
+        // 실제 데이터를 관리하고 각 아이템의 모양을 만들어주는 것
+        itemAdapter = NoticeAdapter()
+        binding.rewardItemList.adapter = itemAdapter
+
+        // 3. 아이템에 데이터 넣어보기
+        itemAdapter?.apply {
+
+            this.items.add(NoticeData(R.drawable.profile1,R.drawable.cafereward,"  카페","  1000포인트"))
+
+        }
     }
 }

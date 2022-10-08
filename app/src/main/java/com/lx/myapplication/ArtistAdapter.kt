@@ -2,8 +2,10 @@ package com.lx.myapplication
 
 import android.content.Intent
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.lx.myapplication.databinding.ArtistItemBinding
 
@@ -15,6 +17,10 @@ class ArtistAdapter : RecyclerView.Adapter<ArtistAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ArtistAdapter.ViewHolder {
         val binding = ArtistItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        binding.joinButton.setOnClickListener {
+            val nextIntent = Intent(ViewHolder(binding).itemView?.context, MainActivity::class.java)
+            ContextCompat.startActivity(ViewHolder(binding).itemView.context, nextIntent, null)
+        }
         return ViewHolder(binding)
     }
 

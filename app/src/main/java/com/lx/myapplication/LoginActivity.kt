@@ -19,6 +19,7 @@ class LoginActivity : AppCompatActivity() {
 
         binding.loginBtn!!.setOnClickListener {
             val user = binding.nickname!!.text.toString()
+            AppData.user = binding.nickname!!.text.toString()
             val pass = binding.password!!.text.toString()
             if (user == "" || pass == "")
                 showToast("회원정보를 전부 입력해주세요ㅎ")

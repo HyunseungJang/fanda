@@ -48,7 +48,7 @@ class HomeFragment : Fragment() {
 
     // 리스트 초기화
     fun initList() {
-        // 1. 리스트의 모양을 담당하는 것
+        // 1. 리스트의 모양을 담당하는 것2030 부산 세계 박람회 유치 기원 콘서트
         // (LinearLayoutManager : 아래쪽으로 아이템들이 보이는 것, GridLayoutManager : 격자 형태로 보이는 것)
         val layoutManager = LinearLayoutManager(activity)
         binding.noticeitemList.layoutManager = layoutManager
@@ -61,9 +61,9 @@ class HomeFragment : Fragment() {
         // 3. 아이템에 데이터 넣어보기
         itemAdapter?.apply {
 
-            this.items.add(NoticeData(R.drawable.jimin,R.drawable.notice1,"  기념일","  지민의 생일을 축하합니다!"))
-            this.items.add(NoticeData(R.drawable.concert1,R.drawable.notice1,"  공연 | 부산아시아드주경기장","  2030 부산세계박람회 유치 기원 콘서트"))
-            this.items.add(NoticeData(R.drawable.concert2,R.drawable.notice1,"  공연","  BTS 'MAP OF THE SOUL TOUR' 서울 콘서트"))
+            this.items.add(NoticeData(R.drawable.jimin,R.drawable.notice1,"  Anniversary","  Happy Birthday Jimin!"))
+            this.items.add(NoticeData(R.drawable.concert1,R.drawable.notice1,"  Concert | Busan Asiad Main Stadium","  2030 Yet to Come in BUSAN"))
+            this.items.add(NoticeData(R.drawable.concert2,R.drawable.notice1,"  Concert","  BTS 'MAP OF THE SOUL TOUR' Seoul Concert"))
 
 
         }
