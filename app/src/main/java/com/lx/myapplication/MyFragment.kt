@@ -58,12 +58,40 @@ class MyFragment : Fragment() {
             binding.progressBar.incrementProgressBy(1000)
             AppData.reward = AppData.reward!! + 1000
             binding.rewardPoints.text = "${AppData.reward} points"
+
+//            when (AppData.reward) {
+//                in 10000..10000 -> binding.rewardText.text = "You can get Special Coupon!"
+//                !in 10000..10000 ->
+//                    binding.rewardText.text = "You can`t get more rewards"
+//                    binding.rewardPoints.text = "${AppData.reward}"
+//                    binding.rewardView.setImageResource(R.drawable.beacon)
+//                    binding.rewardView.setImageResource(R.drawable.beacon)
+//                    binding.rewardPoints.text = "10000"
+//            }
+
             if (AppData.reward == 10000) {
                 binding.rewardText.text = "You can get Special Coupon!"
                 binding.rewardView.setImageResource(R.drawable.ok)
             } else if (AppData.reward == 11000) {
                 binding.rewardText.text = "You can`t get more rewards"
                 binding.rewardView.setImageResource(R.drawable.beacon)
+                binding.rewardPoints.text = "10000"
+            } else if (AppData.reward == 12000) {
+                binding.rewardText.text = "You can`t get more rewards"
+                binding.rewardView.setImageResource(R.drawable.beacon)
+                binding.rewardPoints.text = "10000"
+            } else if (AppData.reward == 13000) {
+                binding.rewardText.text = "You can`t get more rewards"
+                binding.rewardView.setImageResource(R.drawable.beacon)
+                binding.rewardPoints.text = "10000"
+            } else if (AppData.reward == 14000) {
+                binding.rewardText.text = "You can`t get more rewards"
+                binding.rewardView.setImageResource(R.drawable.beacon)
+                binding.rewardPoints.text = "10000"
+            } else if (AppData.reward == 15000) {
+                binding.rewardText.text = "You can`t get more rewards"
+                binding.rewardView.setImageResource(R.drawable.beacon)
+                binding.rewardPoints.text = "10000"
             }
         }
 
@@ -72,27 +100,26 @@ class MyFragment : Fragment() {
             val builder = AlertDialog.Builder(context)
 
             when (AppData.reward) {
-                in 0..4999 -> binding.rewardText.text =
-                    "Please collecting 5,000 points."
-                in 5000..10000 -> {
-                    if (AppData.reward != 10000) {
-                        binding.rewardText.text = "Please collecting 10,000 points."
-                    } else if (AppData.reward == 10000) {
-                        builder.setTitle("Congratulation!")
-                            .setMessage(
-                                "Tmon korea tour package\n" +
-                                        "Please write QRCode 'special'\n" +
-                                        "URL : 'www.tmon.co.kr'"
-                            )
-                            .setPositiveButton("OK",
-                                DialogInterface.OnClickListener { dialog, id ->
-                                })
-                        builder.show()
-                        binding.rewardText.text = "Lucky! Please Write QR Code"
-                    }
+                in 0..9999 -> binding.rewardText.text =
+                    "Please collecting 10,000 points."
+                in 10000..15000 -> {
+                    builder.setTitle("Congratulation!")
+                        .setMessage(
+                            "Tmon korea tour package\n" +
+                                    "Please write QRCode 'special'\n" +
+                                    "URL : 'www.tmon.co.kr'"
+                        )
+                        .setPositiveButton("OK",
+                            DialogInterface.OnClickListener { dialog, id ->
+                            })
+
+                    builder.show()
+                    binding.rewardText.text = "Lucky! Please Write 'special'"
+                    binding.rewardWrite3.text = "'special'"
                 }
             }
         }
+
         // Cafe Coupon
         binding.rewardButton1.setOnClickListener {
             val builder = AlertDialog.Builder(context)
@@ -109,41 +136,31 @@ class MyFragment : Fragment() {
                     builder.show()
                     AppData.reward = AppData.reward!! - 5000
                     binding.rewardPoints.text = "${AppData.reward} points"
-                    binding.rewardText.text = "Lucky! Please Write QR Code"
+                    binding.rewardText.text = "Lucky! Please Write 'cafe' Code"
+                    binding.rewardWrite1.text = "'cafe'"
                 }
-            }
-
-
-            if (AppData.reward != 10000) {
-                binding.rewardText.text = "Please collecting 5,000 points."
-            } else if (AppData.reward == 10000) {
-                builder.setTitle("Cafe Coupon")
-                    .setMessage("Please write QRCode 'cafe'")
-                    .setPositiveButton("OK",
-                        DialogInterface.OnClickListener { dialog, id ->
-                        })
-                builder.show()
-                AppData.reward = AppData.reward!! - 5000
-                binding.rewardPoints.text = "${AppData.reward} points"
-                binding.rewardText.text = "Lucky! Please Write QR Code"
             }
         }
 
         // Restaurant Coupon
         binding.rewardButton2.setOnClickListener {
             val builder = AlertDialog.Builder(context)
-            if (AppData.reward != 5000) {
-                binding.rewardText.text = "Please collecting 5,000 points."
-            } else if (AppData.reward == 5000) {
-                builder.setTitle("Restaurant Coupon")
-                    .setMessage("Please write QRCode 'res'")
-                    .setPositiveButton("OK",
-                        DialogInterface.OnClickListener { dialog, id ->
-                        })
-                builder.show()
-                AppData.reward = AppData.reward!! - 5000
-                binding.rewardPoints.text = "${AppData.reward} points"
-                binding.rewardText.text = "Lucky! Please Write QR Code"
+
+            when (AppData.reward) {
+                in 0..4999 -> binding.rewardText.text =
+                    "Please collecting 5,000 points."
+                in 5000..10000 -> {
+                    builder.setTitle("Restaurant Coupon")
+                        .setMessage("Please write QRCode 'res'")
+                        .setPositiveButton("OK",
+                            DialogInterface.OnClickListener { dialog, id ->
+                            })
+                    builder.show()
+                    AppData.reward = AppData.reward!! - 5000
+                    binding.rewardPoints.text = "${AppData.reward} points"
+                    binding.rewardText.text = "Lucky! Please Write 'res' Code"
+                    binding.rewardWrite2.text = "'res'"
+                }
             }
         }
 
