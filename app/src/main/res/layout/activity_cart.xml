@@ -12,8 +12,10 @@
         android:layout_height="480dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/cart"
+        app:layout_constraintVertical_bias="0.27" />
 
     <TextView
         android:id="@+id/textView32"
@@ -21,7 +23,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="총 갯수"
+        android:fontFamily="@font/medium"
+        android:text="total"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/productList" />
 
@@ -31,7 +35,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:text="합계"
+        android:fontFamily="@font/medium"
+        android:text="sum"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.839"
         app:layout_constraintStart_toEndOf="@+id/textView32"
@@ -43,14 +49,16 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="92dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/button"
+        android:fontFamily="@font/medium"
         android:text="order now"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/refreshButton"
-        app:layout_constraintTop_toBottomOf="@+id/productList"
-        app:layout_constraintVertical_bias="0.77" />
+        app:layout_constraintTop_toBottomOf="@+id/countOutput"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/logOutput"
@@ -66,6 +74,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="84dp"
         android:layout_marginBottom="16dp"
+        android:background="@drawable/button"
+        android:fontFamily="@font/medium"
         android:text="refresh"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -76,10 +86,12 @@
         android:id="@+id/cart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Cart"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/medium"
+        android:text="My Cart"
         android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
