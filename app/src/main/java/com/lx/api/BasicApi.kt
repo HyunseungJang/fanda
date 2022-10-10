@@ -1,9 +1,9 @@
 package com.lx.myapplication.api
 
 import android.util.Log
-import com.lx.myapplication.data.CartListResponse
-import com.lx.myapplication.data.CommunityListResponse
-import com.lx.myapplication.data.FileUploadResponse
+import com.lx.data.CartListResponse
+import com.lx.data.CommunityListResponse
+import com.lx.data.FileUploadResponse
 import okhttp3.Interceptor
 import okhttp3.MultipartBody
 import okhttp3.OkHttpClient

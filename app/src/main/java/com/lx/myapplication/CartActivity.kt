@@ -9,7 +9,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.lx.myapplication.api.BasicClient
-import com.lx.myapplication.data.CartListResponse
+import com.lx.data.CartListResponse
 import com.lx.myapplication.databinding.ActivityCartBinding
 import retrofit2.Call
 import retrofit2.Callback
@@ -96,15 +96,15 @@ class CartActivity : AppCompatActivity() {
         // API에 있는 리스트 조회 요청하기
         BasicClient.api.postCartList(
             requestCode = "1001"
-        ).enqueue(object: Callback<CartListResponse> {
-            override fun onResponse(call: Call<CartListResponse>, response: Response<CartListResponse>) {
+        ).enqueue(object: Callback<com.lx.data.CartListResponse> {
+            override fun onResponse(call: Call<com.lx.data.CartListResponse>, response: Response<com.lx.data.CartListResponse>) {
                 printLog("onResponse 호출됨 : ${response.body().toString()}")
 
                 // 리스트에 추가
                 addToCartList(response)
             }
 
-            override fun onFailure(call: Call<CartListResponse>, t: Throwable) {
+            override fun onFailure(call: Call<com.lx.data.CartListResponse>, t: Throwable) {
                 printLog("onFailure 호출됨 : ${t.message}")
 
             }
@@ -115,7 +115,7 @@ class CartActivity : AppCompatActivity() {
     }
 
     // 응답받은 데이터를 화면에 있는 리스트에 추가하기
-    fun addToCartList(response: Response<CartListResponse>) {
+    fun addToCartList(response: Response<com.lx.data.CartListResponse>) {
         cartAdapter?.apply {
             response.body()?.output?.data?.let {
                 for (item in it) {

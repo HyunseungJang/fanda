@@ -1,13 +1,12 @@
 package com.lx.myapplication
 
-import android.graphics.Bitmap
 import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.lx.myapplication.api.BasicClient
-import com.lx.myapplication.data.CartListResponse
+import com.lx.data.CartListResponse
 import com.lx.myapplication.databinding.CartItemBinding
 import retrofit2.Callback
 import retrofit2.Response
@@ -88,16 +87,16 @@ class CartAdapter : RecyclerView.Adapter<CartAdapter.ViewHolder>() {
             requestCode = "1001",
             id = a.toString()
 
-        ).enqueue(object : Callback<CartListResponse> {
+        ).enqueue(object : Callback<com.lx.data.CartListResponse> {
             override fun onResponse(
-                call: retrofit2.Call<CartListResponse>,
-                response: Response<CartListResponse>
+                call: retrofit2.Call<com.lx.data.CartListResponse>,
+                response: Response<com.lx.data.CartListResponse>
             ) {
                 println("onResponse 호출됨 : ${response.body().toString()}")
 
             }
 
-            override fun onFailure(call: retrofit2.Call<CartListResponse>, t: Throwable) {
+            override fun onFailure(call: retrofit2.Call<com.lx.data.CartListResponse>, t: Throwable) {
                 println("postCartDelete onFailure 호출됨 : ${t.message}")
             }
         })

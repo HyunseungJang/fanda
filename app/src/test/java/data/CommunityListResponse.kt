@@ -1,4 +1,4 @@
-package com.lx.myapplication.data
+package data
 
 
 import com.google.gson.annotations.SerializedName
@@ -20,10 +20,6 @@ data class CommunityListResponse(
         data class Data(
             @SerializedName("content")
             val content: String,
-            //@SerializedName("date")
-            //val date: String,
-            @SerializedName("filepath")
-            val filepath: String,
             @SerializedName("id")
             val id: Int,
             @SerializedName("title")
