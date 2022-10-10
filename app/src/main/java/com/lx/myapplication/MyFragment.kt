@@ -178,6 +178,10 @@ class MyFragment : Fragment() {
         return binding.root
     }
 
+    fun test() {
+
+    }
+
     // QR생성
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         val result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data)
