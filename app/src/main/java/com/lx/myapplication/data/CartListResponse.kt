@@ -18,6 +18,8 @@ data class CartListResponse(
         val header: Header
     ) {
         data class Data(
+            @SerializedName("filepath")
+            val filepath: String,
             @SerializedName("id")
             val id: Int,
             @SerializedName("name")

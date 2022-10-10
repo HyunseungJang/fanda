@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/cartButton5"
+    android:id="@+id/constraintlayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Menu1Fragment">
@@ -10,7 +10,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="90dp"
+        android:layout_marginTop="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,19 +41,36 @@
                     android:layout_weight="1"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/textView18"
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="레몬에이드 5800원"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/name1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Lemonade"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/price1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:text="4.07$"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
 
                     <TextView
                         android:id="@+id/textView19"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="생각만 해도 상큼한 리얼 레몬을 그대로 담았습니다. 나를 위한 리프레쉬 한잔" />
+                        android:text="Refreshing real lemon! A refreshing glass for me" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -61,19 +78,21 @@
                         android:orientation="horizontal">
 
                         <Button
-                            android:id="@+id/cartButto9"
+                            android:id="@+id/cartButton1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="cart" />
+                            android:text="add to cart"
+                            android:textSize="10sp" />
 
                         <Button
-                            android:id="@+id/orderButton9"
+                            android:id="@+id/orderButton1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
                             android:layout_weight="1"
-                            android:text="order now" />
+                            android:text="order now"
+                            android:textSize="10sp" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -97,19 +116,36 @@
                     android:layout_weight="1"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/textView10"
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="아메리카노 3800원"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/name2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Americano"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/price2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:text="2.67$"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
 
                     <TextView
                         android:id="@+id/textView11"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="휴가의 헤더 바리스타가 만든 데일리 커피, 커피를 즐기는 모든 사람들이 부담없이 마실 수 있습니다." />
+                        android:text="Daily coffee, everyone can enjoy it." />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -117,19 +153,21 @@
                         android:orientation="horizontal">
 
                         <Button
-                            android:id="@+id/button13"
+                            android:id="@+id/cartButton2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="cart" />
+                            android:text="add to cart"
+                            android:textSize="10sp" />
 
                         <Button
-                            android:id="@+id/orderButton5"
+                            android:id="@+id/orderButton2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
                             android:layout_weight="1"
-                            android:text="order now" />
+                            android:text="order now"
+                            android:textSize="10sp" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -154,19 +192,36 @@
                     android:layout_weight="1"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/textView16"
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="카페라떼 4500원"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/name3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Cafe latte"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/price3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:text="2.67$"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
 
                     <TextView
                         android:id="@+id/textView17"
-                        android:layout_width="match_parent"
+                        android:layout_width="272dp"
                         android:layout_height="wrap_content"
-                        android:text="따듯하고 부드러운 밀크폼과 휴가의 커피와의 만남, 커피와 우유의 밸런스가 매일 마셔도 질리지 않습니다." />
+                        android:text="Warm and soft milk foam meets coffee, coffee and milk balance" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -174,19 +229,21 @@
                         android:orientation="horizontal">
 
                         <Button
-                            android:id="@+id/cartButton8"
+                            android:id="@+id/cartButton3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="cart" />
+                            android:text="add to cart"
+                            android:textSize="10sp" />
 
                         <Button
-                            android:id="@+id/orderButton8"
+                            android:id="@+id/orderButton3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
                             android:layout_weight="1"
-                            android:text="order now" />
+                            android:text="order now"
+                            android:textSize="10sp" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -210,19 +267,36 @@
                     android:layout_weight="1"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/textView14"
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="에스프레소 2500원"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/name4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Espresso"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/price4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:text="1.75$"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
 
                     <TextView
                         android:id="@+id/textView15"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="두가지맛의 신기한 에스프레소" />
+                        android:text="Two flavors of espresso." />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -230,19 +304,21 @@
                         android:orientation="horizontal">
 
                         <Button
-                            android:id="@+id/cartButton7"
+                            android:id="@+id/cartButton4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="cart" />
+                            android:text="add to cart"
+                            android:textSize="10sp" />
 
                         <Button
-                            android:id="@+id/orderButton7"
+                            android:id="@+id/orderButton4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
                             android:layout_weight="1"
-                            android:text="order now" />
+                            android:text="order now"
+                            android:textSize="10sp" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -266,19 +342,36 @@
                     android:layout_weight="1"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/textView12"
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="청포도라임에이드 5800원"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/name5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Green grape limeade"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/price5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:text="4.07$"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
 
                     <TextView
                         android:id="@+id/textView13"
-                        android:layout_width="match_parent"
+                        android:layout_width="298dp"
                         android:layout_height="wrap_content"
-                        android:text="청포도의 달콤함과 향긋하고 싱그러운 리얼 라임이 함께 했습니다. 따분할때 즐거움을 한잔" />
+                        android:text="The sweetness and fresh lime of green grapes. a cup of pleasure" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -286,19 +379,21 @@
                         android:orientation="horizontal">
 
                         <Button
-                            android:id="@+id/cartButton6"
+                            android:id="@+id/cartButton5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="cart" />
+                            android:text="add to cart"
+                            android:textSize="10sp" />
 
                         <Button
-                            android:id="@+id/orderButton6"
+                            android:id="@+id/orderButton5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
                             android:layout_weight="1"
-                            android:text="order now" />
+                            android:text="order now"
+                            android:textSize="10sp" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -323,19 +418,36 @@
                     android:layout_weight="1"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/textView20"
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="자몽히비스커스 5500원"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/name6"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Grapefruit hibiscus"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/price6"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:text="3.86$"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
 
                     <TextView
                         android:id="@+id/textVie21"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="상큼한 스페셜티" />
+                        android:text="Refreshing Special tea" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -343,19 +455,21 @@
                         android:orientation="horizontal">
 
                         <Button
-                            android:id="@+id/cartButton10"
+                            android:id="@+id/cartButton6"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="cart" />
+                            android:text="add to cart"
+                            android:textSize="10sp" />
 
                         <Button
-                            android:id="@+id/orderButton10"
+                            android:id="@+id/orderButton6"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
                             android:layout_weight="1"
-                            android:text="order now" />
+                            android:text="order now"
+                            android:textSize="10sp" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>

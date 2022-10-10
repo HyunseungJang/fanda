@@ -26,8 +26,6 @@ import com.lx.myapplication.data.CommunityListResponse
 import com.lx.myapplication.data.FileUploadResponse
 import com.lx.myapplication.databinding.FragmentFeedBinding
 import com.permissionx.guolindev.PermissionX
-import kotlinx.android.synthetic.main.feeditem.*
-import kotlinx.android.synthetic.main.fragment_feed.*
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.asRequestBody
@@ -112,7 +110,19 @@ class FeedFragment : Fragment() {
         //초기 리스트 보이기
         getCommunityList()
 
+        binding.chatButton.setOnClickListener {
+            activity?.let{
+                val intent = Intent(context, RankActivity::class.java)
+                startActivity(intent)
+            }
+        }
 
+        binding.rankButton.setOnClickListener {
+            activity?.let{
+                val intent = Intent(context, RankActivity::class.java)
+                startActivity(intent)
+            }
+        }
 
         return binding.root
 
@@ -175,7 +185,7 @@ class FeedFragment : Fragment() {
     fun getCommunityList() {
 
         // API에 있는 리스트 조회 요청하기
-        BasicClient.api.getCommunityList(
+        BasicClient.api.postCommunityList(
             requestCode = "1001",
         ).enqueue(object : Callback<CommunityListResponse> {
             override fun onResponse(

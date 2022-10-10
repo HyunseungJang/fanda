@@ -16,7 +16,7 @@ class CartActivity : AppCompatActivity() {
     lateinit var binding: ActivityCartBinding
 
     //cartAdapter라는 변수상자
-    var cartAdapter: CartAdapter?= null
+    var cartAdapter:CartAdapter ?= null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,6 +28,11 @@ class CartActivity : AppCompatActivity() {
 
         //리스트초기화
         initList()
+
+        binding.refreshButton.setOnClickListener{
+            initList()
+            initView()
+        }
 
     }
 
@@ -49,11 +54,14 @@ class CartActivity : AppCompatActivity() {
 //        }
 
         // 4. 아이템을 클릭했을 때 동작할 코드 넣어주기
-        cartAdapter?.listener = object: OnCartItemClickListener {
+        cartAdapter?.listener = object : OnCartItemClickListener {
             override fun onItemClick(holder: CartAdapter.ViewHolder?, view: View?, position: Int) {
                 cartAdapter?.apply {
                     val item = items.get(position)
-                    showToast("아이템 선택됨 : ${position}, ${item.name}, ${item.price}")
+
+//이거 만들어야 함     Appdata.
+
+                    showToast("아이템 선택됨 : ${position}, ${item.id}, ${item.name}, ${item.price}, ${item.photo}")
 
                 }
             }
@@ -65,7 +73,7 @@ class CartActivity : AppCompatActivity() {
     fun initView() {
 
         // API에 있는 리스트 조회 요청하기
-        BasicClient.api.getCartList(
+        BasicClient.api.postCartList(
             requestCode = "1001"
         ).enqueue(object: Callback<CartListResponse> {
             override fun onResponse(call: Call<CartListResponse>, response: Response<CartListResponse>) {
@@ -91,7 +99,7 @@ class CartActivity : AppCompatActivity() {
             response.body()?.output?.data?.let {
                 for (item in it) {
                     //this.items.add(CartData(R.drawable.profile1, item.name, item.age, item.mobile))
-                    this.items.add(CartData(R.drawable.character1, item.name, item.price))
+                    this.items.add(CartData(item.id, item.name, item.price, item.filepath))
                 }
             }
 

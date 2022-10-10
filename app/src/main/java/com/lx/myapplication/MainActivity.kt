@@ -37,9 +37,9 @@ class MainActivity : AppCompatActivity() {
                             .replace(R.id.fl_container, homeFragment).commit()
                     }
                     R.id.community -> {
-                        val communityFragment = CommunityFragment()
+                        val feedFragment = FeedFragment()
                         supportFragmentManager.beginTransaction()
-                            .replace(R.id.fl_container, communityFragment).commit()
+                            .replace(R.id.fl_container, feedFragment).commit()
                     }
                     R.id.mypage -> {
                         val myFragment = MyFragment()
