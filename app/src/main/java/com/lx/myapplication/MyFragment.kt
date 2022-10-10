@@ -59,16 +59,6 @@ class MyFragment : Fragment() {
             AppData.reward = AppData.reward!! + 1000
             binding.rewardPoints.text = "${AppData.reward} points"
 
-//            when (AppData.reward) {
-//                in 10000..10000 -> binding.rewardText.text = "You can get Special Coupon!"
-//                !in 10000..10000 ->
-//                    binding.rewardText.text = "You can`t get more rewards"
-//                    binding.rewardPoints.text = "${AppData.reward}"
-//                    binding.rewardView.setImageResource(R.drawable.beacon)
-//                    binding.rewardView.setImageResource(R.drawable.beacon)
-//                    binding.rewardPoints.text = "10000"
-//            }
-
             if (AppData.reward == 10000) {
                 binding.rewardText.text = "You can get Special Coupon!"
                 binding.rewardView.setImageResource(R.drawable.ok)
@@ -176,10 +166,6 @@ class MyFragment : Fragment() {
             binding.barcodeImage.setImageBitmap(barcodeBitmap)
         }
         return binding.root
-    }
-
-    fun test() {
-
     }
 
     // QR생성
