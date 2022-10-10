@@ -25,6 +25,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="194dp"
                 android:scaleType="fitXY"
+                android:fontFamily="@font/regular"
                 app:srcCompat="@mipmap/ic_launcher" />
 
             <TextView
@@ -33,6 +34,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
+                android:fontFamily="@font/medium"
                 android:text="장소"
                 android:textColor="#000000"
                 android:textSize="20sp" />
@@ -56,6 +58,7 @@
                     android:layout_height="wrap_content"
 
                     android:layout_marginLeft="2dp"
+                    android:fontFamily="@font/regular"
                     android:layout_marginTop="2.3dp"
                     android:text="위치" />
 
@@ -66,9 +69,6 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
-
-                android:layout_marginTop="2.3dp"
-                android:text="위치" />
 
 
                 <ImageView
@@ -83,10 +83,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="2dp"
+                    android:fontFamily="@font/regular"
                     android:layout_marginTop="2.3dp"
                     android:text="좋아요" />
-                android:layout_marginTop="2.3dp"
-                android:text="좋아요" />
 
             </LinearLayout>
 
@@ -97,6 +96,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="12dp"
                 android:text="상세설명"
+                android:fontFamily="@font/medium"
                 android:textColor="#000000"
                 android:textSize="16sp" />
 
@@ -190,21 +190,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"
-                    android:text="주문하기" />
+                    android:text="Order now" />
 
                 <Button
                     android:id="@+id/beaconButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:text="방문인증하기" />
+                    android:text="QR for visit" />
 
                 <Button
                     android:id="@+id/arButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:text="사진촬영하기" />
+                    android:text="AR for visit" />
             </LinearLayout>
 
         </LinearLayout>
