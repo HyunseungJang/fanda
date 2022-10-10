@@ -40,7 +40,9 @@ class MyFragment : Fragment() {
     fun initView() {
 
     }
+    fun al() {
 
+    }
     // 리스트 초기화
     fun initList() {
         // 1. 리스트의 모양을 담당하는 것
