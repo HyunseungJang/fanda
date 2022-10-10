@@ -104,8 +104,8 @@ class MyFragment : Fragment() {
                             })
 
                     builder.show()
-                    binding.rewardText.text = "Lucky! Please Write 'luck' Code"
-                    binding.rewardWrite3.text = "'luck'"
+                    binding.rewardText.text = "Lucky! Please Write 'special' Code"
+                    binding.rewardWrite3.text = "'special'"
                 }
             }
         }
@@ -170,12 +170,12 @@ class MyFragment : Fragment() {
             val input2 = binding.barcodeText.text.toString()
             val input3 = binding.barcodeText.text.toString()
 
-            if (input1 == "luck") {
-                binding.rewardWrite3.text = "${input1} - this word was used"
+            if (input1 == "special") {
+                binding.rewardWrite3.text = "${input1} - this QR was used"
             } else if (input2 == "cafe") {
-                binding.rewardWrite1.text = "${input2} - this word was used"
+                binding.rewardWrite1.text = "${input2} - this QR was used"
             } else if (input3 == "born") {
-                binding.rewardWrite2.text = "${input3} - this word was used"
+                binding.rewardWrite2.text = "${input3} - this QR was used"
             }
 
         }
