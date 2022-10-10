@@ -8,27 +8,27 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#FAF4C5">
+        android:layout_height="match_parent">
 
         <TextView
             android:id="@+id/rankTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
-            android:text="명예의 덕질랭커"
+            android:layout_width="285dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/medium"
+            android:gravity="center"
+            android:text="Reward Ranking      by Member"
             android:textColor="#000000"
-            android:textSize="34sp"
-            android:textStyle="bold"
+            android:textSize="30sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="368dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/rankTitle">
@@ -39,42 +39,61 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/rankProfile1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/userprofile" />
+                    android:id="@+id/imageView1"
+                    android:layout_width="30dp"
+                    android:layout_height="49dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/ranking11" />
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="264dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/rankUser1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Hyunseung JJang"
-                        android:textSize="34sp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/rankUser1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/medium"
+                            android:text="Hyunseung JJang"
+                            android:textSize="30sp" />
+
+                    </LinearLayout>
 
                     <TextView
                         android:id="@+id/rankPoint1"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="999,999,999"
+                        android:fontFamily="@font/regular"
+                        android:text="999,999p"
                         android:textSize="20sp" />
+
                 </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/rankProfile1"
+                    android:layout_width="36dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ranking1" />
+
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView3"
-            android:layout_width="0dp"
+            android:layout_width="368dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cardView2">
+            tools:layout_editor_absoluteY="241dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -82,41 +101,60 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/rankProfile2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/userprofile" />
+                    android:id="@+id/imageView2"
+                    android:layout_width="30dp"
+                    android:layout_height="49dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/ranking22" />
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="262dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/rankUser2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Maakja is me"
-                        android:textSize="34sp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/rankUser2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/medium"
+                            android:text="Sanghyuk King"
+                            android:textSize="30sp" />
+
+                    </LinearLayout>
 
                     <TextView
                         android:id="@+id/rankPoint2"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="999,999,999"
+                        android:fontFamily="@font/medium"
+                        android:text="99,999p"
                         android:textSize="20sp" />
+
                 </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/rankProfile2"
+                    android:layout_width="36dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ranking2" />
+
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView4"
-            android:layout_width="0dp"
+            android:layout_width="368dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cardView3">
 
@@ -126,36 +164,56 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/rankProfile3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/userprofile" />
+                    android:id="@+id/imageView3"
+                    android:layout_width="30dp"
+                    android:layout_height="49dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/ranking33" />
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="266dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/rankUser3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="coooriiii"
-                        android:textSize="34sp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/rankUser3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/medium"
+                            android:text="coooriii"
+                            android:textSize="30sp" />
+
+                    </LinearLayout>
 
                     <TextView
                         android:id="@+id/rankPoint3"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="999,999,999"
+                        android:fontFamily="@font/medium"
+                        android:text="10,000p"
                         android:textSize="20sp" />
+
                 </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/rankProfile3"
+                    android:layout_width="36dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ranking3" />
+
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView5"
-            android:layout_width="409dp"
+            android:layout_width="368dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -168,38 +226,59 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/rankProfile4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/userprofile" />
+                    android:id="@+id/imageView4"
+                    android:layout_width="30dp"
+                    android:layout_height="49dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/ranking44" />
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="266dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/rankUser4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="kiingeun"
-                        android:textSize="34sp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/rankUser4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/medium"
+                            android:text="kiingeun"
+                            android:textSize="30sp" />
+
+                    </LinearLayout>
 
                     <TextView
                         android:id="@+id/rankPoint4"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="999,999,999"
+                        android:fontFamily="@font/medium"
+                        android:text="9,999p"
                         android:textSize="20sp" />
+
                 </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/rankProfile4"
+                    android:layout_width="36dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ranking4" />
+
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView6"
-            android:layout_width="409dp"
+            android:layout_width="368dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cardView5">
 
@@ -209,37 +288,57 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/rankProfile5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/userprofile" />
+                    android:id="@+id/imageView5"
+                    android:layout_width="30dp"
+                    android:layout_height="49dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/ranking55" />
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="266dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/rankUser5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="K-Sejong"
-                        android:textSize="34sp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/rankUser5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/medium"
+                            android:text="k-sejong"
+                            android:textSize="30sp" />
+
+                    </LinearLayout>
 
                     <TextView
                         android:id="@+id/rankPoint5"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="999,999,999"
+                        android:fontFamily="@font/medium"
+                        android:text="1,000p"
                         android:textSize="20sp" />
+
                 </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/rankProfile5"
+                    android:layout_width="36dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ranking5" />
+
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:layout_width="409dp"
+            android:layout_width="368dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cardView6">
 
@@ -249,32 +348,53 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/rankProfile6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/userprofile" />
+                    android:id="@+id/imageView8"
+                    android:layout_width="30dp"
+                    android:layout_height="49dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/ranking77" />
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="264dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/rankUser6"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Heeeeeu"
-                        android:textSize="34sp" />
+                    <LinearLayout
+                        android:layout_width="269dp"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/rankUser8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/medium"
+                            android:text="minchannooo..."
+                            android:textSize="30sp" />
+
+                    </LinearLayout>
 
                     <TextView
-                        android:id="@+id/rankPoint6"
-                        android:layout_width="match_parent"
+                        android:id="@+id/rankPoint8"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="999,999,999"
+                        android:fontFamily="@font/medium"
+                        android:text="100p"
                         android:textSize="20sp" />
+
                 </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/rankProfile8"
+                    android:layout_width="36dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/minchan" />
+
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

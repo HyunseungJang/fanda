@@ -63,7 +63,7 @@
                     android:layout_height="match_parent"
                     android:layout_gravity="right"
                     android:drawableRight="@drawable/iconcamera"
-                    android:text="Take Captrue!" />
+                    android:text="Take a picture!" />
             </LinearLayout>
 
             <Button

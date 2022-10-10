@@ -29,60 +29,54 @@ import kotlin.collections.HashMap
 interface BasicApi {
 
     /**
-     * GET 방식으로 장바구니 리스트 조회 요청
-     */
-
-    @GET("/cart")
-    fun getCartList(
-        @Query("requestCode") requestCode: String
-    ): Call<CartListResponse>
-
-    /**
      * POST 방식으로 장바구니 리스트 조회 요청
      */
 
     @FormUrlEncoded
-    @POST("/cart")
+    @POST("/cart/list")
     fun postCartList(
         @Field("requestCode") requestCode: String
     ): Call<CartListResponse>
 
     /**
-     * POST 방식으로 학생 추가 요청
+     * POST 방식으로 장바구니 리스트 추가 요청
      */
 
     @FormUrlEncoded
-    @POST("/cart")
+    @POST("/cart/add")
     fun postCartAdd(
         @Field("requestCode") requestCode: String,
         @Field("name") name: String,
-        @Field("price") price: String
+        @Field("price") price: String,
+        @Field("filepath") filepath: String,
     ): Call<CartListResponse>
 
-    /**
-     * GET 방식으로 학생 리스트 조회 요청
-     */
-
-    //리스트 조회
-    @GET("/community") //다수데이터 전송할때는, /community/a로 붙여서
-    fun getCommunityList(
-        @Query("requestCode") requestCode: String
-    ): Call<CommunityListResponse>
-
 
     /**
-     * POST 방식으로 학생 리스트 조회 요청
+     * POST 방식으로 장바구니 리스트 삭제
      */
 
     @FormUrlEncoded
-    @POST("/community")
+    @POST("/cart/delete")
+    fun postCartDelete(
+        @Field("requestCode") requestCode: String,
+        @Field("id") id: String
+    ): Call<CartListResponse>
+
+
+    /**
+     * POST 방식으로 피드 리스트 조회 요청
+     */
+
+    @FormUrlEncoded
+    @POST("/community/add")
     fun postCommunityList(
         @Field("requestCode") requestCode: String
     ): Call<CommunityListResponse>
 
     //리스트에 추가??
     @FormUrlEncoded
-    @POST("/community")
+    @POST("/community/add")
     fun postCommunityAdd(
         @Field("requestCode") requestCode: String,
         @Field("title") title: String,
@@ -127,7 +121,7 @@ class BasicClient {
         private const val PROTOCOL = "http"
 
         // 기본 URL
-        private const val BASE_URL = "http://112.171.49.110:8001/"
+        private const val BASE_URL = "http://192.168.35.217:8001/"
 
         // 헤더 속성
         private const val CLIENT_ID = ""
