@@ -190,21 +190,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"
-                    android:text="order now" />
+                    android:text="주문하기" />
 
                 <Button
                     android:id="@+id/beaconButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:text="QR for visit" />
+                    android:text="방문인증하기" />
 
                 <Button
                     android:id="@+id/arButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:text="AR for visit" />
+                    android:text="사진촬영하기" />
             </LinearLayout>
 
         </LinearLayout>

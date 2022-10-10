@@ -1,5 +1,8 @@
 package com.lx.myapplication
 
+import android.app.AlertDialog
+import android.content.DialogInterface
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -32,6 +35,24 @@ class CartActivity : AppCompatActivity() {
         binding.refreshButton.setOnClickListener{
             initList()
             initView()
+        }
+
+        binding.Button.setOnClickListener {
+            // 팝업창 띄우기
+//            val builder = AlertDialog.Builder(context)
+//            builder.setTitle("Product has been added.")
+//                .setMessage("Would you like to move to the shopping cart?")
+//                .setPositiveButton("No",
+//                    DialogInterface.OnClickListener { dialog, id ->
+////                        resultText.text = "확인 클릭"
+//                    })
+//                .setNegativeButton("Yes",
+//                    DialogInterface.OnClickListener { dialog, id ->
+//                        val cartIntent = Intent(context, CartActivity::class.java)
+//                        cartLauncher.launch(cartIntent)
+//                    })
+            // 다이얼로그를 띄워주기
+//            builder.show()
         }
 
     }
