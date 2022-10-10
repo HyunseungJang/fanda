@@ -164,6 +164,14 @@ class MyFragment : Fragment() {
                 400
             )
             binding.barcodeImage.setImageBitmap(barcodeBitmap)
+            // QR입력하면 텍스트뷰에 사용했다고 표시됨
+            if(binding.rewardWrite3.text == "'special'") {
+                binding.rewardWrite3.text = "'used'"
+            } else if(binding.rewardWrite1.text == "'cafe'") {
+                binding.rewardWrite1.text = "'used'"
+            } else if(binding.rewardWrite2.text == "'res'") {
+                binding.rewardWrite2.text = "'used'"
+            }
         }
         return binding.root
     }
@@ -172,8 +180,7 @@ class MyFragment : Fragment() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         val result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data)
         if (result != null) {
-            if (result.contents != null) {
-            }
+            if (result.contents != null) {}
             if (result.barcodeImagePath != null) {
                 Log.i(TAG, "onActivityResult: ${result.barcodeImagePath}")
                 val bitmap = BitmapFactory.decodeFile(result.barcodeImagePath)
