@@ -67,7 +67,8 @@
                     android:layout_marginLeft="20sp"
                     android:layout_marginTop="20sp"
                     android:text="points"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"
+                    android:textStyle="bold"/>
 
             </LinearLayout>
 
@@ -105,7 +106,8 @@
                 android:layout_marginLeft="115sp"
                 android:layout_marginTop="4dp"
                 android:background="@drawable/registerbtn"
-                android:text="Get Reward" />
+                android:text="Get Reward"
+                android:textStyle="bold"/>
 
             <View
                 android:id="@+id/view2"
@@ -160,7 +162,8 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="@drawable/registerbtn"
-                        android:text="Congratulation" />
+                        android:text="Congratulation"
+                        android:textStyle="bold"/>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -217,7 +220,8 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="@drawable/registerbtn"
-                        android:text="-5000 points" />
+                        android:text="-5000 points"
+                        android:textStyle="bold"/>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -274,7 +278,8 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="@drawable/registerbtn"
-                        android:text="-5000 points" />
+                        android:text="-5000 points"
+                        android:textStyle="bold"/>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -364,7 +369,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="100dp"
                     android:background="@drawable/registerbtn"
-                    android:text="Create QR Code" />
+                    android:text="Create QR Code"
+                    android:textStyle="bold"/>
 
             </LinearLayout>
         </LinearLayout>
