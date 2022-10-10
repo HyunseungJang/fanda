@@ -96,7 +96,7 @@ class MyFragment : Fragment() {
                     builder.setTitle("Congratulation!")
                         .setMessage(
                             "Tmon korea tour package\n" +
-                                    "Please write QRCode 'special'\n" +
+                                    "Please write QRCode 'luck'\n" +
                                     "URL : 'www.tmon.co.kr'"
                         )
                         .setPositiveButton("OK",
@@ -104,7 +104,7 @@ class MyFragment : Fragment() {
                             })
 
                     builder.show()
-                    binding.rewardText.text = "Lucky! Please Write 'special'"
+                    binding.rewardText.text = "Lucky! Please Write 'special' Code"
                     binding.rewardWrite3.text = "'special'"
                 }
             }
@@ -165,22 +165,32 @@ class MyFragment : Fragment() {
             )
             binding.barcodeImage.setImageBitmap(barcodeBitmap)
             // QR입력하면 텍스트뷰에 사용했다고 표시됨
-            if(binding.rewardWrite3.text == "'special'") {
-                binding.rewardWrite3.text = "'used'"
-            } else if(binding.rewardWrite1.text == "'cafe'") {
-                binding.rewardWrite1.text = "'used'"
-            } else if(binding.rewardWrite2.text == "'born'") {
-                binding.rewardWrite2.text = "'used'"
+
+            val input1 = binding.barcodeText.text.toString()
+            val input2 = binding.barcodeText.text.toString()
+            val input3 = binding.barcodeText.text.toString()
+
+            if (input1 == "special") {
+                binding.rewardWrite3.text = "${input1} - this QR was used"
+            } else if (input2 == "cafe") {
+                binding.rewardWrite1.text = "${input2} - this QR was used"
+            } else if (input3 == "born") {
+                binding.rewardWrite2.text = "${input3} - this QR was used"
             }
+
         }
+
         return binding.root
+
     }
+
 
     // QR생성
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         val result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data)
         if (result != null) {
-            if (result.contents != null) {}
+            if (result.contents != null) {
+            }
             if (result.barcodeImagePath != null) {
                 Log.i(TAG, "onActivityResult: ${result.barcodeImagePath}")
                 val bitmap = BitmapFactory.decodeFile(result.barcodeImagePath)
