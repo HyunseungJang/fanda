@@ -65,23 +65,43 @@ class MyFragment : Fragment() {
             } else if (AppData.reward == 11000) {
                 binding.rewardText.text = "You can`t get more rewards"
                 binding.rewardView.setImageResource(R.drawable.beacon)
-                binding.rewardPoints.text = "10000"
+                binding.rewardPoints.text = "10000 points"
             } else if (AppData.reward == 12000) {
                 binding.rewardText.text = "You can`t get more rewards"
                 binding.rewardView.setImageResource(R.drawable.beacon)
-                binding.rewardPoints.text = "10000"
+                binding.rewardPoints.text = "10000 points"
             } else if (AppData.reward == 13000) {
                 binding.rewardText.text = "You can`t get more rewards"
                 binding.rewardView.setImageResource(R.drawable.beacon)
-                binding.rewardPoints.text = "10000"
+                binding.rewardPoints.text = "10000 points"
             } else if (AppData.reward == 14000) {
                 binding.rewardText.text = "You can`t get more rewards"
                 binding.rewardView.setImageResource(R.drawable.beacon)
-                binding.rewardPoints.text = "10000"
+                binding.rewardPoints.text = "10000 points"
             } else if (AppData.reward == 15000) {
                 binding.rewardText.text = "You can`t get more rewards"
                 binding.rewardView.setImageResource(R.drawable.beacon)
-                binding.rewardPoints.text = "10000"
+                binding.rewardPoints.text = "10000 points"
+            } else if (AppData.reward == 16000) {
+                binding.rewardText.text = "You can`t get more rewards"
+                binding.rewardView.setImageResource(R.drawable.beacon)
+                binding.rewardPoints.text = "10000 points"
+            } else if (AppData.reward == 17000) {
+                binding.rewardText.text = "You can`t get more rewards"
+                binding.rewardView.setImageResource(R.drawable.beacon)
+                binding.rewardPoints.text = "10000 points"
+            } else if (AppData.reward == 18000) {
+                binding.rewardText.text = "You can`t get more rewards"
+                binding.rewardView.setImageResource(R.drawable.beacon)
+                binding.rewardPoints.text = "10000 points"
+            } else if (AppData.reward == 19000) {
+                binding.rewardText.text = "You can`t get more rewards"
+                binding.rewardView.setImageResource(R.drawable.beacon)
+                binding.rewardPoints.text = "10000 points"
+            } else if (AppData.reward == 20000) {
+                binding.rewardText.text = "You can`t get more rewards"
+                binding.rewardView.setImageResource(R.drawable.beacon)
+                binding.rewardPoints.text = "10000 points"
             }
         }
 
@@ -96,7 +116,7 @@ class MyFragment : Fragment() {
                     builder.setTitle("Congratulation!")
                         .setMessage(
                             "Tmon korea tour package\n" +
-                                    "Please write QRCode 'luck'\n" +
+                                    "Please write QRCode 'special'\n" +
                                     "URL : 'www.tmon.co.kr'"
                         )
                         .setPositiveButton("OK",
@@ -105,6 +125,7 @@ class MyFragment : Fragment() {
 
                     builder.show()
                     binding.rewardText.text = "Lucky! Please Write 'special' Code"
+                    binding.rewardView.setImageResource(R.drawable.ok)
                     binding.rewardWrite3.text = "'special'"
                 }
             }
@@ -139,7 +160,7 @@ class MyFragment : Fragment() {
             when (AppData.reward) {
                 in 0..4999 -> binding.rewardText.text =
                     "Please collecting 5,000 points."
-                in 5000..10000 -> {
+                in 5000..20000 -> {
                     builder.setTitle("Born and Bred Coupon")
                         .setMessage("Please write QRCode 'born'")
                         .setPositiveButton("OK",
