@@ -96,16 +96,16 @@ class MyFragment : Fragment() {
                     builder.setTitle("Congratulation!")
                         .setMessage(
                             "Tmon korea tour package\n" +
-                            "Please write QRCode 'special'\n" +
-                            "URL : 'www.tmon.co.kr'"
+                                    "Please write QRCode 'luck'\n" +
+                                    "URL : 'www.tmon.co.kr'"
                         )
                         .setPositiveButton("OK",
                             DialogInterface.OnClickListener { dialog, id ->
                             })
 
                     builder.show()
-                    binding.rewardText.text = "Lucky! Please Write 'special'"
-                    binding.rewardWrite3.text = "'special'"
+                    binding.rewardText.text = "Lucky! Please Write 'luck' Code"
+                    binding.rewardWrite3.text = "'luck'"
                 }
             }
         }
@@ -170,12 +170,12 @@ class MyFragment : Fragment() {
             val input2 = binding.barcodeText.text.toString()
             val input3 = binding.barcodeText.text.toString()
 
-            if (input1 == "special") {
-                binding.rewardWrite3.text = "word used : ${input1}"
-            } else if(input2 == "cafe") {
-                binding.rewardWrite1.text = "word used : ${input2}"
+            if (input1 == "luck") {
+                binding.rewardWrite3.text = "${input1} - this word was used"
+            } else if (input2 == "cafe") {
+                binding.rewardWrite1.text = "${input2} - this word was used"
             } else if (input3 == "born") {
-                binding.rewardWrite2.text = "word used : ${input3}"
+                binding.rewardWrite2.text = "${input3} - this word was used"
             }
 
         }
@@ -183,6 +183,7 @@ class MyFragment : Fragment() {
         return binding.root
 
     }
+
 
     // QR생성
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
