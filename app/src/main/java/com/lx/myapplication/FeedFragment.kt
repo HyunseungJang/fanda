@@ -112,7 +112,19 @@ class FeedFragment : Fragment() {
         //초기 리스트 보이기
         getCommunityList()
 
+        binding.chatButton.setOnClickListener {
+            activity?.let{
+                val intent = Intent(context, RankActivity::class.java)
+                startActivity(intent)
+            }
+        }
 
+        binding.rankButton.setOnClickListener {
+            activity?.let{
+                val intent = Intent(context, RankActivity::class.java)
+                startActivity(intent)
+            }
+        }
 
         return binding.root
 
