@@ -118,7 +118,7 @@ class MyFragment : Fragment() {
                 in 0..4999 -> binding.rewardText.text =
                     "Please collecting 5,000 points."
                 in 5000..10000 -> {
-                    builder.setTitle("Cafe Coupon")
+                    builder.setTitle("Cafe Hyuga Coupon")
                         .setMessage("Please write QRCode 'cafe'")
                         .setPositiveButton("OK",
                             DialogInterface.OnClickListener { dialog, id ->
@@ -140,16 +140,16 @@ class MyFragment : Fragment() {
                 in 0..4999 -> binding.rewardText.text =
                     "Please collecting 5,000 points."
                 in 5000..10000 -> {
-                    builder.setTitle("Restaurant Coupon")
-                        .setMessage("Please write QRCode 'res'")
+                    builder.setTitle("Born and Bred Coupon")
+                        .setMessage("Please write QRCode 'born'")
                         .setPositiveButton("OK",
                             DialogInterface.OnClickListener { dialog, id ->
                             })
                     builder.show()
                     AppData.reward = AppData.reward!! - 5000
                     binding.rewardPoints.text = "${AppData.reward} points"
-                    binding.rewardText.text = "Lucky! Please Write 'res' Code"
-                    binding.rewardWrite2.text = "'res'"
+                    binding.rewardText.text = "Lucky! Please Write 'born' Code"
+                    binding.rewardWrite2.text = "'born'"
                 }
             }
         }
@@ -169,7 +169,7 @@ class MyFragment : Fragment() {
                 binding.rewardWrite3.text = "'used'"
             } else if(binding.rewardWrite1.text == "'cafe'") {
                 binding.rewardWrite1.text = "'used'"
-            } else if(binding.rewardWrite2.text == "'res'") {
+            } else if(binding.rewardWrite2.text == "'born'") {
                 binding.rewardWrite2.text = "'used'"
             }
         }

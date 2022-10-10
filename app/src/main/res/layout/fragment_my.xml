@@ -199,7 +199,7 @@
                         android:id="@+id/rewardText1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Cafe Coupon"
+                        android:text="Cafe Hyuga"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
@@ -256,7 +256,7 @@
                         android:id="@+id/rewardText2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Restaurant Coupon"
+                        android:text="Born and Bred"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
@@ -347,7 +347,7 @@
                     android:id="@+id/generateBarcode"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="125dp"
+                    android:layout_marginLeft="100dp"
                     android:background="@drawable/registerbtn"
                     android:text="Create QR Code" />
 
