@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.lx.myapplication.databinding.PlaceItemBinding
+import com.lx.myapplication.PlaceData
 
 class PlaceAdapter : RecyclerView.Adapter<PlaceAdapter.ViewHolder>() {
     // 각 아이템에 보여질 데이터를 담고 있는 것

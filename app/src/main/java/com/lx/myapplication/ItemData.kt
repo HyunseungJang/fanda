@@ -5,11 +5,11 @@ import android.widget.ImageView
 import java.text.DateFormat
 
 data class ItemData(
-    val feedprofile:Int? = null,
-    val feedpicture:Int? = null,
-    val feedtitle:String? = null,
-    val feedtime:String? = null,
-    val feedtext:String? = null
+    val feedPicture:String? = null,
+    val feedTitle:String? = null,
+    val feedTime:String? = null,
+    val feedText:String? = null,
+    val feedProfile:String? = null
 )
 
 

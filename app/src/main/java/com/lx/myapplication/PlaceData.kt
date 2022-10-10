@@ -1,6 +1,5 @@
-package com.example.list
+package com.lx.myapplication
 
-import android.security.identity.AccessControlProfile
 
 data class PlaceData (
 
@@ -9,7 +8,11 @@ data class PlaceData (
     val content:String? = null,
     val like:String? = null,
     val placeInfo:String? = null,
-    val info:String? = null
+    val info:String? = null,
+    val photo1:Int? = null,
+    val photo2:Int? = null,
+    val photo3:Int? = null,
+    val photo4:Int? = null
 
 )
 

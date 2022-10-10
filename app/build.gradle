@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android-extensions'
+    id "com.google.gms.google-services" version "4.3.13" apply false
 }
 
 android {
@@ -81,4 +83,15 @@ dependencies {
 
     // 검색
     implementation 'com.github.mancj:MaterialSearchBar:0.7.1'
+
+    // 채팅
+    implementation 'com.google.firebase:firebase-database:19.1.0'
+    // okhttp
+    implementation("com.squareup.okhttp3:okhttp:4.10.0")
+    // Logging Interceptor
+    implementation("com.squareup.okhttp3:logging-interceptor:4.10.0")
+    // 레트로핏 retrofit
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    // 컨버터쥐손 converter-gson
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
 }

@@ -1,6 +1,6 @@
 package com.lx.myapplication
 
-import com.example.list.PlaceData
+import com.lx.myapplication.PlaceData
 
 class AppData {
 

@@ -4,10 +4,12 @@ package com.lx.myapplication
 import android.Manifest
 import android.content.Intent
 import android.location.Location
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Looper
 import android.widget.Toast
+import androidx.lifecycle.Transformations.map
 import com.lx.myapplication.databinding.ActivityPlaceInfoBinding
 import com.google.android.gms.location.*
 import com.google.android.gms.maps.CameraUpdateFactory
@@ -16,7 +18,7 @@ import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.*
 import com.permissionx.guolindev.PermissionX
 
-    class PlaceInfoActivity : AppCompatActivity() {
+class PlaceInfoActivity : AppCompatActivity() {
     lateinit var binding: ActivityPlaceInfoBinding
 
     var locationClient:FusedLocationProviderClient? = null
@@ -30,40 +32,39 @@ import com.permissionx.guolindev.PermissionX
         binding = ActivityPlaceInfoBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        var qrCodeScan = QRCodeScan(this)
-
-        // 이전 화면에서 선택한 아이템의 데이터를 이 화면에 있는 텍스트뷰에 보여주기
+        // 이전 화면에서 선택한 아이템의 데이터를 이 화면에 있는 것에 보여주기
         AppData.selectedItem?.apply {
             binding.placeOutput.text = "${this.place}"
             binding.placeInfoOutput.text = "${this.placeInfo}"
             binding.likeInfoOutput.text = "${this.like}"
             binding.InfoOutput.text = "${this.info}"
+            this.photo1?.let { binding.artistImage.setImageResource(it) }
+            this.photo2?.let { binding.infoImageView1.setImageResource(it) }
+            this.photo3?.let { binding.infoImageView2.setImageResource(it) }
+            this.photo4?.let { binding.infoImageView3.setImageResource(it) }
         }
 
-        binding.artistImage.setImageResource(R.drawable.huga)
-        binding.infoImageView1.setImageResource(R.drawable.cafehuga1)
-        binding.infoImageView2.setImageResource(R.drawable.cafehuga2)
-        binding.infoImageView3.setImageResource(R.drawable.cafehuga3)
 
 
         // 주문하기 버튼 눌렀을 때
         binding.orderButton.setOnClickListener {
             val nextIntent = Intent(this, OrderActivity::class.java)
             startActivity(nextIntent)
+
         }
         // 방문인증하기 버튼 눌렀을 때
         binding.beaconButton.setOnClickListener {
-            qrCodeScan.startQRScan()
+
         }
         // 사진촬영하기 버튼 눌렀을 떄
         binding.arButton.setOnClickListener {
             AppData.reward = AppData.reward!! + 1000
-            
+
         }
 
         // Google Map으로 이동 버튼 눌렀을 때
         binding.gmButton.setOnClickListener {
-
+            goToMap()
         }
 
         // 위험 권한 요청하기
@@ -74,9 +75,9 @@ import com.permissionx.guolindev.PermissionX
             )
             .request { allGranted, grantedList, deniedList ->
                 if(allGranted) {
-                    showToast("모든 권한 부여됨")
+                    showToast("allGranted")
                 } else {
-                    showToast("거부된 권한 있음")
+                    showToast("refuseGranted")
                 }
             }
 
@@ -90,17 +91,16 @@ import com.permissionx.guolindev.PermissionX
 
             // 마커 클릭 시 처리
             map.setOnMarkerClickListener {
-                showToast("마커 클릭 됨: ${it.title}")
+                showToast("${it.title}")
 
                 // 필요 시 다른 화면으로 이동(tag 정보를 이용해서 구분함)
-
 
                 true
             }
 
             // 지도 클릭 시 처리
             map.setOnMapClickListener {
-                showToast("지도 클릭 됨: ${it.latitude}, ${it.longitude}")
+                showToast("${it.latitude}, ${it.longitude}")
             }
 
             // 보고있는 지도 영역 구분
@@ -116,8 +116,21 @@ import com.permissionx.guolindev.PermissionX
         // 내 위치 버튼 눌렀을 떄
         binding.myLocationButton.setOnClickListener {
             requestLocation()
+            showToast("My Location")
         }
 
+    }
+
+    // 구글맵 앱으로 이동하기
+    fun goToMap() {
+        val mapIntent: Intent = Uri.parse(
+            "geo:0,0?q=Born and Bred,+1 Majangno 42(sasibi)-gil,+Seongdong-gu,+Seoul,+South Korea"
+        ).let { location ->
+            // Or map point based on latitude/longitude
+            // val location: Uri = Uri.parse("geo:37.422219,-122.08364?z=14") // z param is zoom level
+            Intent(Intent.ACTION_VIEW, location)
+        }
+        startActivity(mapIntent)
     }
 
     fun requestLocation() {
@@ -143,7 +156,6 @@ import com.permissionx.guolindev.PermissionX
                     super.onLocationResult(result)
 
                     for ((index, location) in result.locations.withIndex()) {
-                        showToast("내 위치: ${location.latitude}, ${location.longitude}")
 
                         showCurrentLocation(location)
                     }
@@ -165,13 +177,12 @@ import com.permissionx.guolindev.PermissionX
 
         showMarker(curPoint)
     }
-
     fun showMarker(curPoint:LatLng) {
         myMarker?.remove()
 
         MarkerOptions().also {
             it.position(curPoint)
-            it.title("내 위치")
+            it.title("My Location")
             it.icon(BitmapDescriptorFactory.fromResource(R.drawable.location))
 
             myMarker = map.addMarker(it)

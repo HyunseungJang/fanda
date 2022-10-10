@@ -1,8 +1,13 @@
 package com.lx.myapplication
 
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.graphics.alpha
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.lx.myapplication.ItemData
+import com.lx.myapplication.OnFeedItemClickListener
 import com.lx.myapplication.databinding.FeeditemBinding
 
 
@@ -39,21 +44,26 @@ class ItemAdapter : RecyclerView.Adapter<ItemAdapter.ViewHolder>() {
         // 하나의 아이템을 위한 데이터가 전달되었을 때 화면에 어떻게 표시할 지 설정
         fun setItem(item:ItemData) {
             // 이미지 표시하기
-            item.feedprofile?.apply {
-                binding.profilePicture.setImageResource(this)
+
+            // 글라이드를 이용해서 웹서버에 올린 이미지를 가져와서 보여주기
+            item.feedPicture?.apply {
+                val uri = Uri.parse("http://112.171.49.110:8001${this}")
+                Glide.with(binding.feedInputPicture)         // 글라이드를 사용하는데,
+                    .load(uri)                              // 이미지 파일을 읽어와서,
+                    .into(binding.feedInputPicture)           // 이미지뷰에 넣어주세요
             }
-            item.feedpicture?.apply{
-                binding.feedInputPicture.setImageResource(this)
-            }
+
 
             // 제목 표시하기
-            binding.feedTitle.text = item.feedtitle
+            binding.feedTitle.text = item.feedTitle
 
             // 시간 표시하기
-            binding.feedTime.text = item.feedtime.toString()
+            binding.feedTime.text = item.feedTime.toString()
 
             // 내용 표시하기
-            binding.feedInputText.text = item.feedtext
+            binding.feedInputText.text = item.feedText
+
+
         }
 
     }

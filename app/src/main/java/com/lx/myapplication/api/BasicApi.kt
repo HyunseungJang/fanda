@@ -2,6 +2,8 @@ package com.lx.myapplication.api
 
 import android.util.Log
 import com.lx.myapplication.data.CartListResponse
+import com.lx.myapplication.data.CommunityListResponse
+import com.lx.myapplication.data.FileUploadResponse
 import okhttp3.Interceptor
 import okhttp3.MultipartBody
 import okhttp3.OkHttpClient
@@ -57,9 +59,48 @@ interface BasicApi {
         @Field("price") price: String
     ): Call<CartListResponse>
 
+    /**
+     * GET 방식으로 학생 리스트 조회 요청
+     */
+
+    //리스트 조회
+    @GET("/community") //다수데이터 전송할때는, /community/a로 붙여서
+    fun getCommunityList(
+        @Query("requestCode") requestCode: String
+    ): Call<CommunityListResponse>
 
 
+    /**
+     * POST 방식으로 학생 리스트 조회 요청
+     */
 
+    @FormUrlEncoded
+    @POST("/community")
+    fun postCommunityList(
+        @Field("requestCode") requestCode: String
+    ): Call<CommunityListResponse>
+
+    //리스트에 추가??
+    @FormUrlEncoded
+    @POST("/community")
+    fun postCommunityAdd(
+        @Field("requestCode") requestCode: String,
+        @Field("title") title: String,
+        @Field("content") content: String,
+        @Field("filepath") filepath: String
+    ): Call<CommunityListResponse>
+
+
+    /**
+     * 파일 업로드 요청
+     */
+
+    @Multipart
+    @POST("/community/upload")
+    fun uploadFile(
+        @Part file: MultipartBody.Part,
+        @Part(value="params", encoding="UTF-8") params: HashMap<String,String> = hashMapOf()
+    ): Call<FileUploadResponse>
 
 }
 
@@ -86,7 +127,7 @@ class BasicClient {
         private const val PROTOCOL = "http"
 
         // 기본 URL
-        private const val BASE_URL = "http://192.168.35.217:8001/"
+        private const val BASE_URL = "http://112.171.49.110:8001/"
 
         // 헤더 속성
         private const val CLIENT_ID = ""
