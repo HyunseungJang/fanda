@@ -108,10 +108,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="115sp"
                 android:layout_marginTop="4dp"
-                android:background="@drawable/registerbtn"
-                android:text="Get Reward"
+                android:background="@drawable/loginbtn"
                 android:fontFamily="@font/medium"
-                android:textStyle="bold"/>
+                android:text="Get Reward"
+                android:textStyle="bold" />
 
             <View
                 android:id="@+id/view2"

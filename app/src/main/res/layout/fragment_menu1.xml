@@ -55,7 +55,7 @@
                             android:layout_height="match_parent"
                             android:layout_marginLeft="10dp"
                             android:layout_weight="1"
-                            android:text="1.33$"
+                            android:text="3300 won"
                             android:textSize="20sp"
                             android:textStyle="bold" />
 
@@ -130,7 +130,7 @@
                             android:layout_height="match_parent"
                             android:layout_marginLeft="10dp"
                             android:layout_weight="1"
-                            android:text="3.37$"
+                            android:text="4200 won"
                             android:textSize="20sp"
                             android:textStyle="bold" />
 
@@ -205,7 +205,7 @@
                             android:layout_height="match_parent"
                             android:layout_marginLeft="10dp"
                             android:layout_weight="1"
-                            android:text="3.37$"
+                            android:text="4000 won"
                             android:textSize="20sp"
                             android:textStyle="bold" />
 
@@ -281,7 +281,7 @@
                             android:layout_height="match_parent"
                             android:layout_marginLeft="10dp"
                             android:layout_weight="1"
-                            android:text="4.07$"
+                            android:text="4500 won"
                             android:textSize="20sp"
                             android:textStyle="bold" />
 
@@ -356,7 +356,7 @@
                             android:layout_height="match_parent"
                             android:layout_marginLeft="10dp"
                             android:layout_weight="1"
-                            android:text="4.77$"
+                            android:text="5600 won"
                             android:textSize="20sp"
                             android:textStyle="bold" />
 
@@ -432,7 +432,7 @@
                             android:layout_height="match_parent"
                             android:layout_marginLeft="10dp"
                             android:layout_weight="1"
-                            android:text="1.40$"
+                            android:text="2500 won"
                             android:textSize="20sp"
                             android:textStyle="bold" />
 
