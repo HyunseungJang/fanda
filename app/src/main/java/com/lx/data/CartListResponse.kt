@@ -1,4 +1,4 @@
-package com.lx.myapplication.data
+package com.lx.data
 
 
 import com.google.gson.annotations.SerializedName

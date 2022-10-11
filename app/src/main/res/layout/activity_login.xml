@@ -15,6 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Need an account?"
+        android:fontFamily="@font/medium"
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -81,7 +82,7 @@
         android:layout_marginEnd="260dp"
         android:text="Username"
         android:textSize="20sp"
-        android:textStyle="bold"
+        android:fontFamily="@font/medium"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -114,7 +115,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView36" />
+        app:layout_constraintTop_toBottomOf="@+id/textView36"
+        app:layout_constraintVertical_bias="0.285" />
 
     <TextView
         android:id="@+id/textView36"
@@ -124,8 +126,8 @@
         android:layout_marginTop="12dp"
         android:layout_marginEnd="262dp"
         android:text="Password"
+        android:fontFamily="@font/medium"
         android:textSize="20sp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"

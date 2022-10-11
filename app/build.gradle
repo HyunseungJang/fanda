@@ -1,8 +1,10 @@
 plugins {
     id 'com.android.application'
-    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android' // 채팅에 필요한 것
+    id 'kotlin-kapt' // 채팅에 필요한 것
+    id 'org.jetbrains.kotlin.android' // 채팅에 필요한 것
     id 'kotlin-android-extensions'
-    id "com.google.gms.google-services" version "4.3.13" apply false
+    id "com.google.gms.google-services" // 채팅에 필요한 것
 }
 
 android {
@@ -94,4 +96,9 @@ dependencies {
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     // 컨버터쥐손 converter-gson
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0"
+    implementation 'com.google.firebase:firebase-database-ktx:19.2.1'
+    def lifecycle_version = "2.4.0"
+    implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
 }

@@ -11,19 +11,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.lx.myapplication.ItemAdapter
-import com.lx.myapplication.MainActivity
-import com.lx.myapplication.OnFeedItemClickListener
-import com.lx.myapplication.R
 import com.lx.myapplication.api.BasicClient
 import com.lx.myapplication.api.BasicClient.Companion.api
-import com.lx.myapplication.data.CommunityListResponse
-import com.lx.myapplication.data.FileUploadResponse
+import com.lx.data.CommunityListResponse
+import com.lx.data.FileUploadResponse
 import com.lx.myapplication.databinding.FragmentFeedBinding
 import com.permissionx.guolindev.PermissionX
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
@@ -112,7 +107,7 @@ class FeedFragment : Fragment() {
 
         binding.chatButton.setOnClickListener {
             activity?.let{
-                val intent = Intent(context, RankActivity::class.java)
+                val intent = Intent(context, ChatMainActivity::class.java)
                 startActivity(intent)
             }
         }
@@ -187,17 +182,17 @@ class FeedFragment : Fragment() {
         // API에 있는 리스트 조회 요청하기
         BasicClient.api.postCommunityList(
             requestCode = "1001",
-        ).enqueue(object : Callback<CommunityListResponse> {
+        ).enqueue(object : Callback<com.lx.data.CommunityListResponse> {
             override fun onResponse(
-                call: Call<CommunityListResponse>,
-                response: Response<CommunityListResponse>
+                call: Call<com.lx.data.CommunityListResponse>,
+                response: Response<com.lx.data.CommunityListResponse>
             ) {
                 // 성공 응답
                 println("onResponse 호출됨 : ${response.body().toString()}")
                 addToCommunityList(response)
             }
 
-            override fun onFailure(call:Call<CommunityListResponse>, t: Throwable) {
+            override fun onFailure(call:Call<com.lx.data.CommunityListResponse>, t: Throwable) {
                 // 실패 응답
                 println("getCommunityList onFailure 호출됨 : ${t.message}")
 
@@ -208,7 +203,7 @@ class FeedFragment : Fragment() {
     }
 
     // 응답받은 데이터를 화면에 있는 리스트에 추가하기
-    fun addToCommunityList(response: Response<CommunityListResponse>) {
+    fun addToCommunityList(response: Response<com.lx.data.CommunityListResponse>) {
         itemAdapter?.apply {
             response.body()?.output?.data?.let {
                 for (item in it) {
@@ -265,8 +260,8 @@ class FeedFragment : Fragment() {
         BasicClient.api.uploadFile(
             file = filePart,
             params = params
-        ).enqueue(object : Callback<FileUploadResponse> {
-            override fun onResponse(call: Call<FileUploadResponse>, response: Response<FileUploadResponse>) {
+        ).enqueue(object : Callback<com.lx.data.FileUploadResponse> {
+            override fun onResponse(call: Call<com.lx.data.FileUploadResponse>, response: Response<com.lx.data.FileUploadResponse>) {
                 // 성공 응답
                 println("onResponse 호출됨됨 : ${response.body().toString()}")
 
@@ -276,7 +271,7 @@ class FeedFragment : Fragment() {
 
             }
 
-            override fun onFailure(call: Call<FileUploadResponse>, t: Throwable) {
+            override fun onFailure(call: Call<com.lx.data.FileUploadResponse>, t: Throwable) {
                 // 실패 응답
                 println("uploadFile onFailure 호출됨 : ${t.message}")
 
@@ -293,10 +288,10 @@ class FeedFragment : Fragment() {
             title = title,
             content = content,
             filepath = filepath
-        ).enqueue(object : Callback<CommunityListResponse> {
+        ).enqueue(object : Callback<com.lx.data.CommunityListResponse> {
             override fun onResponse(
-                call: Call<CommunityListResponse>,
-                response: Response<CommunityListResponse>
+                call: Call<com.lx.data.CommunityListResponse>,
+                response: Response<com.lx.data.CommunityListResponse>
             ) {
                 // 성공 응답
                 println("onResponse 호출됨 : ${response.body().toString()}")
@@ -304,7 +299,7 @@ class FeedFragment : Fragment() {
                 // showToast("사진찍은 정보 업로드 완료됨")
             }
 
-            override fun onFailure(call: Call<CommunityListResponse>, t: Throwable) {
+            override fun onFailure(call: Call<com.lx.data.CommunityListResponse>, t: Throwable) {
                 // 실패 응답
                 println("postCommunityAdd onFailure 호출됨 : ${t.message}")
             }
