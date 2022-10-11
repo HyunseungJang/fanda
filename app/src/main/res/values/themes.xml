@@ -1,6 +1,8 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.MyApplication" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.MyApplication"
+        parent="Theme.MaterialComponents.DayNight.NoActionBar">
+<!--        MaterialComponents-->
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -16,9 +18,10 @@
         <item name="android:enforceNavigationBarContrast" tools:targetApi="q">false</item>
         <item name="android:enforceStatusBarContrast" tools:targetApi="q">false</item>
         <!-- Customize your theme here. -->
-
     </style>
-
+<!--    <style name="Theme.MyApplication2"-->
+<!--        parent="Theme.MaterialComponents.DayNight.NoActionBar">-->
+<!--    </style>-->
     <!-- Ripple Effect -->
     <style name="AppTheme.BlueRipple">
         <item name="colorControlHighlight">#0000ff</item>
