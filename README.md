@@ -2,7 +2,7 @@
 
 FANDA connects fans and artists.
 
-![image](https://user-images.githubusercontent.com/112330490/204070400-7a9d30cc-275a-42da-a57d-da646bb10cf3.png)
+![1](https://github.com/HyunseungJang/fanda/assets/112330490/080ce35e-4a19-4fd2-b5ea-695d6f02fcfa)
 
 ## :man_technologist: **About**
 * Is there any way to communicate with your favorite artist?
