@@ -2,7 +2,7 @@
 
 FANDA connects fans and artists.
 
-![1](https://github.com/HyunseungJang/fanda/assets/112330490/080ce35e-4a19-4fd2-b5ea-695d6f02fcfa)
+![0](https://github.com/HyunseungJang/fanda/assets/112330490/fd53a3b5-48f9-4261-b330-af082054969b)
 
 ## :man_technologist: **About**
 * Is there any way to communicate with your favorite artist?
@@ -43,3 +43,5 @@ __With this app, you can feel the feeling of being with your favorite artist!__
 
 ## :iphone: **Screenshots**
 
+![1](https://github.com/HyunseungJang/fanda/assets/112330490/080ce35e-4a19-4fd2-b5ea-695d6f02fcfa)
+![2](https://github.com/HyunseungJang/fanda/assets/112330490/a1af343d-d69e-4ccd-ad46-43e180fe7615)
